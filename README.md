@@ -6,9 +6,7 @@ I built this to get hands-on with multimodal LLMs instead of sticking to text-on
 
 ## Demo
 
-![screenshot placeholder](examples/screenshot.png)
-
-*(run it yourself and drop a screenshot here - see Usage below)*
+examples/screenshot.png
 
 ## Why Qwen2.5-VL
 
