@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # only installing pillow + pytest here on purpose - the full
+      # torch/transformers stack is way too heavy for CI and the tests
+      # don't touch the model anyway
+      - name: install test deps
+        run: pip install pillow pytest
+
+      - name: run tests
+        run: pytest tests/ -v
