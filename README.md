@@ -8,8 +8,6 @@ I built this to get hands-on with multimodal LLMs instead of sticking to text-on
 
 ![screenshot placeholder](examples/screenshot.png)
 
-*(run it yourself and drop a screenshot here - see Usage below)*
-
 ## Why Qwen2.5-VL
 
 I went back and forth between LLaVA and Qwen2.5-VL. Landed on Qwen for a few reasons:
