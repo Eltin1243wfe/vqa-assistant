@@ -1,0 +1,28 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+
+# model cache / weights - these are huge, don't want them in git
+.cache/
+models/
+*.bin
+*.safetensors
+
+# gradio
+gradio_cached_examples/
+flagged/
+
+# os junk
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+
+# env vars / secrets
+.env
