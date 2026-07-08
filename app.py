@@ -31,7 +31,10 @@ def get_engine():
 
 def respond(image, question, chat_display, raw_history):
     if image is None:
-        chat_display = chat_display + [(question, "Upload an image first and I'll take a look!")]
+        chat_display = chat_display + [
+            {"role": "user", "content": question},
+            {"role": "assistant", "content": "Upload an image first and I'll take a look!"},
+        ]
         return chat_display, raw_history, ""
 
     if not question or not question.strip():
@@ -54,7 +57,10 @@ def respond(image, question, chat_display, raw_history):
         {"role": "assistant", "content": answer},
     ]
 
-    chat_display = chat_display + [(question.strip(), answer)]
+    chat_display = chat_display + [
+        {"role": "user", "content": question.strip()},
+        {"role": "assistant", "content": answer},
+    ]
     return chat_display, updated_history, ""
 
 
