@@ -16,7 +16,7 @@ Hugging Face (a few GB), so give it a minute the first time.
 
 import torch
 from PIL import Image
-from transformers import Qwen2VLForConditionalGeneration, AutoProcessor
+from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from qwen_vl_utils import process_vision_info
 
 # Default model - small enough to be practical, still solid quality.
@@ -43,7 +43,7 @@ class VQAEngine:
 
         print(f"[engine] loading {model_name} onto {device}... this can take a bit")
 
-        self.model = Qwen2VLForConditionalGeneration.from_pretrained(
+        self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
             model_name,
             torch_dtype="auto",
             device_map="auto" if device == "cuda" else None,
